@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './Navbar';
+import BlogDetails from './BlogDetails'
 import Home from './Home';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Create from './Create';
@@ -7,8 +8,6 @@ import Create from './Create';
 
 
 function App() {
-  const title = 'Welcome to the new blog';
-  
   return (
     <Router>
         <div className="App">
@@ -16,7 +15,8 @@ function App() {
         <div className="content">
           <Routes>
             <Route exact path='/' element={<Home />} />
-            <Route exact path='/create' element={<Create/>}/>
+            <Route exact path='/create' element={<Create />} />
+            <Route exact path='/blogs/:id' element={<BlogDetails />} />
           </Routes>
         </div>
         </div>
